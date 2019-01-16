@@ -7,11 +7,9 @@ public class CharacterCombat : MonoBehaviour
 {
     public float attackSpeed = 1f;
     private float attackCooldown = 0f;
-
-    public float attackDelay = .6f;
+    public float attackDelay = 0.6f;
 
     public event System.Action OnAttack;
-
     CharacterStats myStats;
     CharacterStats enemyStats;
 
@@ -27,24 +25,27 @@ public class CharacterCombat : MonoBehaviour
         attackCooldown -= Time.deltaTime;
     }
 
-    public void Attack(CharacterStats targetStats)
+    public void Attack(CharacterStats enemyStats)
     {
         if (attackCooldown <= 0f)
         {
-            StartCoroutine(DoDamage(targetStats, attackDelay));
+            this.enemyStats = enemyStats;
+            attackCooldown = 1f / attackSpeed;
+            StartCoroutine(DoDamage(enemyStats, attackDelay));
+            
 
             if (OnAttack != null)
                 OnAttack();
-
-            attackCooldown = 1f / attackSpeed;
         }
 
     }
 
     IEnumerator DoDamage(CharacterStats stats, float delay)
     {
+        print("Start");
         yield return new WaitForSeconds(delay);
 
-        //enemyStats.TakeDamage(myStats.damage.GetValue());
+        Debug.Log(transform.name + " swings for " + myStats.damage.Getvalue() + " damage");
+        enemyStats.TakeDamage(myStats.damage.Getvalue());
     }
 }

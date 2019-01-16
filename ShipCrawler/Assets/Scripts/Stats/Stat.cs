@@ -26,4 +26,10 @@ public class Stat
         if (modifier != 0)
             modifiers.Add(modifier);
     }
+
+    public void RemoveModifier(int modifier)
+    {
+        if (modifier != 0)
+            modifiers.Remove(modifier);
+    }
 }
