@@ -23,6 +23,9 @@ public class UIStatUpdate : MonoBehaviour
     {
         healthSlider.value = stats.currentHealth;
 
+
+        //Journal.Instance.Log("took damage");
+
         if (Input.GetKeyDown("return"))
         {
             stats.TakeDamage(20);
