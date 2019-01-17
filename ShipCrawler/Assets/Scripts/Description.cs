@@ -11,6 +11,6 @@ public class Description : Interactable
         base.Interact();
 
         Debug.Log($"Hey here is cool Description test {description}");
-        //Journal.Instance.Log(description);
+        Journal.Instance.Log(description);
     }
 }
