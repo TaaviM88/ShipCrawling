@@ -18,11 +18,14 @@ public class EnemyRandomPatrol : MonoBehaviour
 
     private NavMeshAgent agent;
 
+    CharacterCombat combat;
+
     // Start is called before the first frame update
     void Start()
     {
         currentRandomPoint = Random.Range(0, randomPoints.Length);
         agent = transform.GetComponent<NavMeshAgent>();
+        combat = GetComponent<CharacterCombat>();
     }
 
     // Update is called once per frame
@@ -62,6 +65,13 @@ public class EnemyRandomPatrol : MonoBehaviour
             } else {
                 walk();
             }
+        }
+
+        //Taavin hyökkäys sekoiluja
+        if(chasing && playerDist < attackDistance)
+        {
+            CharacterStats targetPlayer = Player.GetComponent<CharacterStats>();
+            combat.Attack(targetPlayer);
         }
 
         if (randomPointDist <= 8) {
