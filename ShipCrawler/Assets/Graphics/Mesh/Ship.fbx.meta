@@ -1,0 +1,200 @@
+fileFormatVersion: 2
+guid: fda4375d8a131d04da72b7e57a3371fa
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Balcony_Railings
+    100002: Bottom_Door
+    100004: Cell_Bars
+    100006: Cell_Door
+    100008: Cell_Door2
+    100010: Cell_Wall
+    100012: Covers
+    100014: Crate_Ceiling
+    100016: Crowsnest
+    100018: Hallway_Door
+    100020: Hallway_Wall
+    100022: Hull
+    100024: Lower_Stairs
+    100026: Masts
+    100028: Rope
+    100030: Sails
+    100032: //RootNode
+    100034: Stairs_to_Balcony
+    100036: Stairs_to_Deck
+    100038: Upper_Deck
+    100040: Upper_Deck_Doors
+    400000: Balcony_Railings
+    400002: Bottom_Door
+    400004: Cell_Bars
+    400006: Cell_Door
+    400008: Cell_Door2
+    400010: Cell_Wall
+    400012: Covers
+    400014: Crate_Ceiling
+    400016: Crowsnest
+    400018: Hallway_Door
+    400020: Hallway_Wall
+    400022: Hull
+    400024: Lower_Stairs
+    400026: Masts
+    400028: Rope
+    400030: Sails
+    400032: //RootNode
+    400034: Stairs_to_Balcony
+    400036: Stairs_to_Deck
+    400038: Upper_Deck
+    400040: Upper_Deck_Doors
+    2100000: Hull
+    2100002: Sails
+    2300000: Balcony_Railings
+    2300002: Bottom_Door
+    2300004: Cell_Bars
+    2300006: Cell_Door
+    2300008: Cell_Door2
+    2300010: Cell_Wall
+    2300012: Covers
+    2300014: Crate_Ceiling
+    2300016: Crowsnest
+    2300018: Hallway_Door
+    2300020: Hallway_Wall
+    2300022: Hull
+    2300024: Lower_Stairs
+    2300026: Masts
+    2300028: Rope
+    2300030: Sails
+    2300032: Stairs_to_Balcony
+    2300034: Stairs_to_Deck
+    2300036: Upper_Deck
+    2300038: Upper_Deck_Doors
+    3300000: Balcony_Railings
+    3300002: Bottom_Door
+    3300004: Cell_Bars
+    3300006: Cell_Door
+    3300008: Cell_Door2
+    3300010: Cell_Wall
+    3300012: Covers
+    3300014: Crate_Ceiling
+    3300016: Crowsnest
+    3300018: Hallway_Door
+    3300020: Hallway_Wall
+    3300022: Hull
+    3300024: Lower_Stairs
+    3300026: Masts
+    3300028: Rope
+    3300030: Sails
+    3300032: Stairs_to_Balcony
+    3300034: Stairs_to_Deck
+    3300036: Upper_Deck
+    3300038: Upper_Deck_Doors
+    4300000: Hallway_Door
+    4300002: Cell_Door
+    4300004: Cell_Door2
+    4300006: Covers
+    4300008: Crowsnest
+    4300010: Sails
+    4300012: Rope
+    4300014: Upper_Deck_Doors
+    4300016: Upper_Deck
+    4300018: Balcony_Railings
+    4300020: Stairs_to_Balcony
+    4300022: Masts
+    4300024: Bottom_Door
+    4300026: Crate_Ceiling
+    4300028: Hallway_Wall
+    4300030: Cell_Bars
+    4300032: Cell_Wall
+    4300034: Lower_Stairs
+    4300036: Stairs_to_Deck
+    4300038: Hull
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hull
+    second: {fileID: 2100000, guid: c0e00657669b4104281b048ec003c785, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
