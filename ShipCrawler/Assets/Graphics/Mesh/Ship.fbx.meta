@@ -24,6 +24,13 @@ ModelImporter:
     100036: Stairs_to_Deck
     100038: Upper_Deck
     100040: Upper_Deck_Doors
+    100042: Cell_Door_1
+    100044: Cell_Door_1 1
+    100046: Cell_Door_2
+    100048: Cell_Door_2 1
+    100050: Hallway_Doors
+    100052: Hallway_Doors 1
+    100054: Hallway_Doors_Base
     400000: Balcony_Railings
     400002: Bottom_Door
     400004: Cell_Bars
@@ -45,6 +52,13 @@ ModelImporter:
     400036: Stairs_to_Deck
     400038: Upper_Deck
     400040: Upper_Deck_Doors
+    400042: Cell_Door_1
+    400044: Cell_Door_1 1
+    400046: Cell_Door_2
+    400048: Cell_Door_2 1
+    400050: Hallway_Doors
+    400052: Hallway_Doors 1
+    400054: Hallway_Doors_Base
     2100000: Hull
     2100002: Sails
     2300000: Balcony_Railings
