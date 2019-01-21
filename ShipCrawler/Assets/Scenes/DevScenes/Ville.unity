@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3f0db002f7e97469d20c1bdce2b6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FadeSpeed: 5
+  FadeSpeed: 24
   RolloverCharacterSpread: 100
   ColorTint: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &789134163
@@ -688,6 +688,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5023052563222598022, guid: b53e3d7b17e2bd845bb77aa98ed52b6d,
+        type: 3}
+      propertyPath: damage.baseValue
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 477379631, guid: b53e3d7b17e2bd845bb77aa98ed52b6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -742,11 +747,6 @@ PrefabInstance:
       propertyPath: playerStats
       value: 
       objectReference: {fileID: 883521814}
-    - target: {fileID: 5023052563222598022, guid: b53e3d7b17e2bd845bb77aa98ed52b6d,
-        type: 3}
-      propertyPath: damage.baseValue
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 1218458715, guid: b53e3d7b17e2bd845bb77aa98ed52b6d, type: 3}
       propertyPath: logText
       value: 
@@ -755,6 +755,18 @@ PrefabInstance:
       propertyPath: textboxObj
       value: 
       objectReference: {fileID: 707532344}
+    - target: {fileID: 1218458715, guid: b53e3d7b17e2bd845bb77aa98ed52b6d, type: 3}
+      propertyPath: textCoundown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218458715, guid: b53e3d7b17e2bd845bb77aa98ed52b6d, type: 3}
+      propertyPath: textCountdown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218458715, guid: b53e3d7b17e2bd845bb77aa98ed52b6d, type: 3}
+      propertyPath: textCooldown
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b53e3d7b17e2bd845bb77aa98ed52b6d, type: 3}
 --- !u!1001 &5286299124866604251
@@ -768,6 +780,42 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MasterCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 707532346, guid: 2a5a47aaaafb06243b1689adfad244e9, type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 707532346, guid: 2a5a47aaaafb06243b1689adfad244e9, type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 707532346, guid: 2a5a47aaaafb06243b1689adfad244e9, type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707532346, guid: 2a5a47aaaafb06243b1689adfad244e9, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 707532346, guid: 2a5a47aaaafb06243b1689adfad244e9, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 707532346, guid: 2a5a47aaaafb06243b1689adfad244e9, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707532346, guid: 2a5a47aaaafb06243b1689adfad244e9, type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707532346, guid: 2a5a47aaaafb06243b1689adfad244e9, type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707532346, guid: 2a5a47aaaafb06243b1689adfad244e9, type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5286299123663194759, guid: 2a5a47aaaafb06243b1689adfad244e9,
         type: 3}
@@ -914,21 +962,5 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 707532346, guid: 2a5a47aaaafb06243b1689adfad244e9, type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 707532346, guid: 2a5a47aaaafb06243b1689adfad244e9, type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 707532346, guid: 2a5a47aaaafb06243b1689adfad244e9, type: 3}
-      propertyPath: m_isRightToLeft
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 707532346, guid: 2a5a47aaaafb06243b1689adfad244e9, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a5a47aaaafb06243b1689adfad244e9, type: 3}

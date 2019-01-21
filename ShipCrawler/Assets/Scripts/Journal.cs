@@ -11,6 +11,10 @@ public class Journal : MonoBehaviour
     public static Journal Instance { get; set; }
     public float textCooldown = 3;
     float countdown;
+    public bool textCountdown;
+    bool isRolling = false, canLog = true;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -37,16 +41,24 @@ public class Journal : MonoBehaviour
     void Update()
     {
         countdown -= Time.deltaTime;
-        if (countdown <= 0f)
+        if (countdown <= 0f && textCountdown == true && isRolling == true)
         {
-            logText.text = "";
+            //logText.text = "";
+            StartRolling();
+            isRolling = false;
         }
     }
 
     public void Log(string text)
     {
-        logText.text = text;
-        countdown = textCooldown;
+        if (canLog == true)
+        {
+            logText.text = text;
+            countdown = textCooldown;
+            isRolling = true;
+            canLog = false;
+        }
+        
     }
 
     public void ToggleImagebox(bool toggle)
@@ -61,5 +73,20 @@ public class Journal : MonoBehaviour
         {
             //ui.ToggleOn(false);
         }
+    }
+
+    public void StartRolling()
+    {
+        RollingTextFade.Instance.StartRolling();
+    }
+   
+    public void CanLogAgain(bool a)
+    {
+        canLog = a;
+    }
+
+    public void Empty()
+    {
+        logText.text = "";
     }
 }

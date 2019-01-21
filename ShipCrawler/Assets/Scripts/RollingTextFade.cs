@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using TMPro;
 
-
-namespace TMPro.Examples
-{
 
     public class RollingTextFade : MonoBehaviour
     {
@@ -14,10 +12,18 @@ namespace TMPro.Examples
         public int RolloverCharacterSpread = 10;
         public Color ColorTint;
 
+        public static RollingTextFade Instance { get; set; }
 
         void Awake()
         {
             m_TextComponent = GetComponent<TMP_Text>();
+
+            if (Instance != null && Instance != this)
+            {
+                Destroy(this.gameObject);
+            }
+            else
+                Instance = this;
         }
 
 
@@ -51,6 +57,8 @@ namespace TMPro.Examples
             int currentCharacter = 0;
             int startingCharacterRange = currentCharacter;
             bool isRangeMax = false;
+
+            
 
             while (!isRangeMax)
             {
@@ -96,6 +104,7 @@ namespace TMPro.Examples
 
                         if (startingCharacterRange == characterCount)
                         {
+                            Journal.Instance.Empty();
                             // Update mesh vertex data one last time.
                             m_TextComponent.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
 
@@ -104,12 +113,15 @@ namespace TMPro.Examples
                             // Reset the text object back to original state.
                             m_TextComponent.ForceMeshUpdate();
 
+                            
+
                             yield return new WaitForSeconds(1.0f);
 
                             // Reset our counters.
                             currentCharacter = 0;
                             startingCharacterRange = 0;
-                            //isRangeMax = true; // Would end the coroutine.
+                            isRangeMax = true; // Would end the coroutine.
+                            
                         }
                     }
                 }
@@ -120,7 +132,20 @@ namespace TMPro.Examples
                 if (currentCharacter + 1 < characterCount) currentCharacter += 1;
 
                 yield return new WaitForSeconds(0.25f - FadeSpeed * 0.01f);
+
+                
             }
+            if (isRangeMax == true)
+            {
+                //Journal.Instance.Log("");
+                
+                Journal.Instance.CanLogAgain(true);
+            }
+    }
+
+        public void StartRolling()
+        {
+            StartCoroutine(AnimateVertexColors());
         }
     }
-}
+
