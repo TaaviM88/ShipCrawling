@@ -8,7 +8,8 @@ public class CharacterCombat : MonoBehaviour
     public float attackSpeed = 1f;
     private float attackCooldown = 0f;
     public float attackDelay = 0.6f;
-
+    float lastAttackTime;
+    public bool InCombat { get; private set;}
     public event System.Action OnAttack;
     CharacterStats myStats;
     CharacterStats enemyStats;
@@ -23,6 +24,10 @@ public class CharacterCombat : MonoBehaviour
     void Update()
     {
         attackCooldown -= Time.deltaTime;
+        if(Time.time - lastAttackTime > attackCooldown)
+        {
+            InCombat = false;
+        }
     }
 
     public void Attack(CharacterStats enemyStats)
@@ -31,16 +36,19 @@ public class CharacterCombat : MonoBehaviour
         {
             this.enemyStats = enemyStats;
             attackCooldown = 1f / attackSpeed;
-            StartCoroutine(DoDamage(enemyStats, attackDelay));
-            
+            //StartCoroutine(DoDamage(enemyStats, attackDelay));
+            AttackHit_AnimationEvent();
 
             if (OnAttack != null)
                 OnAttack();
+
+            InCombat = true;
+            lastAttackTime = Time.time;
         }
 
     }
 
-    IEnumerator DoDamage(CharacterStats stats, float delay)
+    /*IEnumerator DoDamage(CharacterStats stats, float delay)
     {
         print("Start");
         yield return new WaitForSeconds(delay);
@@ -48,5 +56,15 @@ public class CharacterCombat : MonoBehaviour
         Debug.Log(transform.name + " swings for " + myStats.damage.Getvalue() + " damage");
         Journal.Instance.Log($"{transform.name} swings for {myStats.damage.Getvalue()} damage");
         enemyStats.TakeDamage(myStats.damage.Getvalue());
+    }*/
+
+    public void AttackHit_AnimationEvent()
+    {
+        enemyStats.TakeDamage(myStats.damage.Getvalue());
+        Journal.Instance.Log($"{transform.name} swings for {myStats.damage.Getvalue()} damage");
+        if (enemyStats.currentHealth <= 0)
+        {
+            InCombat = false;
+        }
     }
 }
