@@ -127,6 +127,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Hull
     second: {fileID: 2100000, guid: c0e00657669b4104281b048ec003c785, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sails
+    second: {fileID: 2100000, guid: ed6b75082947f5f46b0b029b9ad4f113, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
