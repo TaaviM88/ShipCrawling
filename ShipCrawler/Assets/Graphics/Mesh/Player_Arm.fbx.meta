@@ -284,8 +284,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Player_Rig|Idle
       takeName: Player_Rig|Idle
-      firstFrame: 0
-      lastFrame: 74
+      firstFrame: 5
+      lastFrame: 64
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -293,7 +293,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0

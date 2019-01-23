@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Key1
   icon: {fileID: 0}
-  isDefaultItem: 0
+  isDefaultItem: 1

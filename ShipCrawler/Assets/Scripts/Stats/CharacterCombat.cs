@@ -67,4 +67,9 @@ public class CharacterCombat : MonoBehaviour
             InCombat = false;
         }
     }
+
+    public void AttackAnimation()
+    {
+        OnAttack();
+    }
 }

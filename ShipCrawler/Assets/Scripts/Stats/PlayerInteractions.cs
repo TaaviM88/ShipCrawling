@@ -12,6 +12,7 @@ public class PlayerInteractions : MonoBehaviour
     void Start()
     {
         combat = GetComponent<CharacterCombat>();
+
     }
 
     // Update is called once per frame
@@ -44,7 +45,10 @@ public class PlayerInteractions : MonoBehaviour
                     }
 
                 }
+
+                
             }
+            combat.AttackAnimation();
         }
     }
     
