@@ -81,7 +81,7 @@ public class EnemyRandomPatrol : MonoBehaviour
         if (chaseTime == true)
             chaseStopwatch += Time.deltaTime;
 
-        if (chaseStopwatch >= 5 && seeingPlayer == false) {
+        if (chaseStopwatch >= 10 && seeingPlayer == false) {
                 chaseTime = false;
                 chaseStopwatch = 0;
                 chasing = false;
