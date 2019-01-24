@@ -11,6 +11,7 @@ public class CharacterCombat : MonoBehaviour
     float lastAttackTime;
     public bool InCombat { get; private set;}
     public event System.Action OnAttack;
+    public event System.Action OnDefence;
     CharacterStats myStats;
     CharacterStats enemyStats;
 
@@ -48,6 +49,15 @@ public class CharacterCombat : MonoBehaviour
 
     }
 
+
+    public void  Defence()
+    {
+        //this.enemyStats = enemyStats;
+        if (OnDefence != null)
+            OnDefence();
+
+    }
+
     /*IEnumerator DoDamage(CharacterStats stats, float delay)
     {
         print("Start");
@@ -61,7 +71,7 @@ public class CharacterCombat : MonoBehaviour
     public void AttackHit_AnimationEvent()
     {
         enemyStats.TakeDamage(myStats.damage.Getvalue());
-        Journal.Instance.Log($"{transform.name} swings for {myStats.damage.Getvalue()} damage");
+        //Journal.Instance.Log($"{transform.name} swings for {myStats.damage.Getvalue()} damage");
         if (enemyStats.currentHealth <= 0)
         {
             InCombat = false;
@@ -71,5 +81,10 @@ public class CharacterCombat : MonoBehaviour
     public void AttackAnimation()
     {
         OnAttack();
+    }
+
+    public void DefenceAnimation()
+    {
+
     }
 }

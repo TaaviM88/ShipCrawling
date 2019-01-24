@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: DefaultSword
   m_EditorClassIdentifier: 
   name: DefaultSword
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: c7f77d27d4bfaf64480550c3ab895a9d, type: 3}
   isDefaultItem: 1
-  obj: {fileID: 0}
+  obj: {fileID: 100000, guid: bcd6aa2acc9384b459d487948ab97d93, type: 3}
   equipSlot: 0
   armorModifier: 0
   damageModifier: 1

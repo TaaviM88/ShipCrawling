@@ -25,6 +25,7 @@ public class CharacterAnimator : MonoBehaviour
         animator.runtimeAnimatorController = overrideController;
         currentAttackAnimationSet = defaultAttackAnimationSet;
         combat.OnAttack += OnAttack;
+        combat.OnDefence += OnDefence;
     }
 
     protected virtual void Update()
@@ -37,6 +38,12 @@ public class CharacterAnimator : MonoBehaviour
         animator.SetTrigger("Attack");
         int attackIndex = Random.Range(0, currentAttackAnimationSet.Length);
         overrideController[replaceableAttackAnimation.name] = currentAttackAnimationSet[attackIndex];
+
+    }
+
+    protected virtual void OnDefence()
+    {
+        animator.SetTrigger("Guard");
 
     }
 }

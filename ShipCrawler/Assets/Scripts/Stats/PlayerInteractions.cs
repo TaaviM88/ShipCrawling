@@ -50,6 +50,12 @@ public class PlayerInteractions : MonoBehaviour
             }
             
         }
+
+        if(Input.GetButton("Fire2"))
+        {
+            combat.Defence();
+
+        }
     }
     
     void SetFocus(Interactable newFocus)
