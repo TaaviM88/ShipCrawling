@@ -68,7 +68,7 @@ public class EnemyRandomPatrol : MonoBehaviour
         }
 
         //Taavin hyökkäys sekoiluja
-        if(chasing && playerDist < attackDistance)
+        if(seeingPlayer && playerDist < attackDistance)
         {
             CharacterStats targetPlayer = Player.GetComponent<CharacterStats>();
             combat.Attack(targetPlayer);
