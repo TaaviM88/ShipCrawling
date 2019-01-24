@@ -45,10 +45,10 @@ public class PlayerInteractions : MonoBehaviour
                     }
 
                 }
+                combat.AttackAnimation();
 
-                
             }
-            combat.AttackAnimation();
+            
         }
     }
     
