@@ -88,6 +88,8 @@ GameObject:
   - component: {fileID: 346213601}
   - component: {fileID: 346213600}
   - component: {fileID: 346213599}
+  - component: {fileID: 1338028307}
+  - component: {fileID: 1338028308}
   m_Layer: 0
   m_Name: NewPlayer
   m_TagString: Player
@@ -315,6 +317,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 003396688fdc12546b08ca648c22c339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1338028307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346213598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982fe74e246d2b7489032298cae7e576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  space: 8
+  items: []
+--- !u!195 &1338028308
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346213598}
+  m_Enabled: 0
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 0
+  m_Acceleration: 0
+  avoidancePriority: 0
+  m_AngularSpeed: 0
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 0
+  m_AutoRepath: 0
+  m_Height: 1
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 0
 --- !u!1 &1773282222
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +580,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 4a9c51b2ea6c5c243a4926d2fd88179f, type: 2}
+    - target: {fileID: 400028, guid: 7347fcbfa0fdefc4ab5a3f1987b02250, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.044531133
+      objectReference: {fileID: 0}
+    - target: {fileID: 400028, guid: 7347fcbfa0fdefc4ab5a3f1987b02250, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.10734928
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7347fcbfa0fdefc4ab5a3f1987b02250, type: 3}
 --- !u!4 &1719797845 stripped

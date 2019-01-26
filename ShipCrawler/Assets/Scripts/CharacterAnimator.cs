@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 public class CharacterAnimator : MonoBehaviour
 {
     public AnimationClip replaceableAttackAnimation;
@@ -11,12 +11,12 @@ public class CharacterAnimator : MonoBehaviour
     protected Animator animator;
     protected CharacterCombat combat;
     public AnimatorOverrideController overrideController;
-
+    NavMeshAgent agent;
     protected virtual void Start()
     {
         animator = GetComponentInChildren<Animator>();
         combat = GetComponent<CharacterCombat>();
-
+        agent = GetComponent<NavMeshAgent>();
         if(overrideController == null)
         {
             overrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
@@ -30,6 +30,8 @@ public class CharacterAnimator : MonoBehaviour
 
     protected virtual void Update()
     {
+        float speedPercent = agent.velocity.magnitude / agent.speed;
+        animator.SetFloat("SpeedPercent", speedPercent,locomationAnimationSmoothTime,Time.deltaTime);
         animator.SetBool("inCombat", combat.InCombat);
     }
     
