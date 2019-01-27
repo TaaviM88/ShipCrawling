@@ -6,7 +6,7 @@ using UnityEngine;
 public class Enemy : Interactable
 {
     CharacterStats stats;
-
+    public GameObject ragdoll;
     //public RagdollManager ragdoll;
     // Start is called before the first frame update
     void Start()
@@ -26,6 +26,7 @@ public class Enemy : Interactable
     {
         /*ragdoll.transform.parent = null;
         ragdoll.Setup();*/
+        Instantiate(ragdoll, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 

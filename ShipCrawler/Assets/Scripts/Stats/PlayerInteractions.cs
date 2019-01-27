@@ -27,6 +27,7 @@ public class PlayerInteractions : MonoBehaviour
             if(Physics.Raycast(ray, out hit, 1.5f))
             {
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
+
                 if(interactable != null)
                 {
                     SetFocus(interactable);
@@ -45,9 +46,12 @@ public class PlayerInteractions : MonoBehaviour
                     }
 
                 }
-                combat.AttackAnimation();
-
+                
             }
+           /* else
+            {
+                combat.AttackAnimation();
+            }*/
             
         }
 

@@ -52,10 +52,15 @@ public class CharacterCombat : MonoBehaviour
 
     public void  Defence()
     {
-        //this.enemyStats = enemyStats;
-        if (OnDefence != null)
-            OnDefence();
+        if (attackCooldown <= 0f)
+        {
+            attackCooldown = 1f / attackSpeed;
+            //this.enemyStats = enemyStats;
+            if (OnDefence != null)
+                OnDefence();
 
+            lastAttackTime = Time.time;
+        }
     }
 
     /*IEnumerator DoDamage(CharacterStats stats, float delay)
@@ -80,7 +85,17 @@ public class CharacterCombat : MonoBehaviour
 
     public void AttackAnimation()
     {
-        OnAttack();
+        if (attackCooldown <= 0f)
+        {
+            attackCooldown = 1f / attackSpeed;
+
+            if (OnAttack != null)
+                OnAttack();
+
+            InCombat = true;
+            lastAttackTime = Time.time;
+        }
+
     }
 
     public void DefenceAnimation()

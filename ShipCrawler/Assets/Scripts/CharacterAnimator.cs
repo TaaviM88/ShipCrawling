@@ -12,11 +12,24 @@ public class CharacterAnimator : MonoBehaviour
     protected CharacterCombat combat;
     public AnimatorOverrideController overrideController;
     NavMeshAgent agent;
+    Rigidbody rb;
+    public bool useNavMeshAgent = true;
+    //Used only animator, for walking speed
+    float speedPercent;
     protected virtual void Start()
     {
         animator = GetComponentInChildren<Animator>();
         combat = GetComponent<CharacterCombat>();
-        agent = GetComponent<NavMeshAgent>();
+        //Käytetäänkö navmeshagentti vaiko rigidbodyä. Vihollisilla navmesh agentti. Pelaajalla rigidbody
+        if(useNavMeshAgent)
+        {
+            agent = GetComponent<NavMeshAgent>();
+        }
+        else
+        {
+            rb = GetComponent<Rigidbody>();
+        }
+        
         if(overrideController == null)
         {
             overrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
@@ -30,7 +43,15 @@ public class CharacterAnimator : MonoBehaviour
 
     protected virtual void Update()
     {
-        float speedPercent = agent.velocity.magnitude / agent.speed;
+        
+        if (useNavMeshAgent)
+        {
+           speedPercent = agent.velocity.magnitude / agent.speed;
+        }
+        else
+        {
+            speedPercent = rb.velocity.magnitude;
+        }
         animator.SetFloat("SpeedPercent", speedPercent,locomationAnimationSmoothTime,Time.deltaTime);
         animator.SetBool("inCombat", combat.InCombat);
     }

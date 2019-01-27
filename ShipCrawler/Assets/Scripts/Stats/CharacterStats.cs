@@ -26,7 +26,7 @@ public class CharacterStats : MonoBehaviour
     public void TakeDamage(int damage)
     {
         // Subtract the armor value
-        damage -= armor.Getvalue(); //lisää tää heti kun armor tsydeemi on tehty. Comment
+        damage -= armor.Getvalue(); 
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
 
         // Damage the character
