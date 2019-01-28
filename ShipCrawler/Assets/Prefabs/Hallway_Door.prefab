@@ -146,8 +146,8 @@ GameObject:
   m_Component:
   - component: {fileID: 943458471}
   - component: {fileID: 943458470}
-  - component: {fileID: 943458468}
   - component: {fileID: 943458469}
+  - component: {fileID: 663350200}
   m_Layer: 0
   m_Name: Hallway_Door
   m_TagString: Untagged
@@ -191,19 +191,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &943458468
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 943458466}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.350946, y: 1.8456249, z: 0.15829086}
-  m_Center: {x: -0.73353887, y: 4.617859, z: 12.2584305}
 --- !u!114 &943458469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,6 +215,19 @@ MonoBehaviour:
     idiot.
   door: {fileID: 943458466}
   requiedItemObject: {fileID: 0}
+--- !u!65 &663350200
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943458466}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.350946, y: 1.8456249, z: 0.15829086}
+  m_Center: {x: -0.73353887, y: 4.617859, z: 12.2584305}
 --- !u!1 &1235199667
 GameObject:
   m_ObjectHideFlags: 0
