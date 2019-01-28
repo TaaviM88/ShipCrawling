@@ -8,6 +8,7 @@ public class PlayerData
     public float[] position;
 
     public int health;
+    
 
     public PlayerData (SaveManager player)
     {

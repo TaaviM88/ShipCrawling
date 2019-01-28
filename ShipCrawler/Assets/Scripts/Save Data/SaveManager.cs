@@ -18,6 +18,7 @@ public class SaveManager : MonoBehaviour
         if (Input.GetKeyDown("k"))
         {
             SavePlayer();
+            
         }
 
         if (Input.GetKeyDown("l"))

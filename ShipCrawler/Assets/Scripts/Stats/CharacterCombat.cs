@@ -44,6 +44,7 @@ public class CharacterCombat : MonoBehaviour
                 OnAttack();
 
             InCombat = true;
+            FindObjectOfType<AudioManager>().Play("PlayerSlash");
             lastAttackTime = Time.time;
         }
 

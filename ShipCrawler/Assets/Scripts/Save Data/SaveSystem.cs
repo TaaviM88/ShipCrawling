@@ -14,6 +14,7 @@ public static class SaveSystem
 
         formatter.Serialize(stream, data);
         stream.Close();
+        
     }
 
     public static PlayerData LoadPlayer()
@@ -23,7 +24,7 @@ public static class SaveSystem
         {
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
-
+            
             PlayerData data = formatter.Deserialize(stream) as PlayerData;
             stream.Close();
 
