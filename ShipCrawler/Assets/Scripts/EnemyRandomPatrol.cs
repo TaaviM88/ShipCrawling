@@ -74,7 +74,7 @@ public class EnemyRandomPatrol : MonoBehaviour
             combat.Attack(targetPlayer);
         }
 
-        if (randomPointDist <= 8) {
+        if (randomPointDist <= 2) {
             currentRandomPoint = Random.Range(0, randomPoints.Length);
             walk();
 
