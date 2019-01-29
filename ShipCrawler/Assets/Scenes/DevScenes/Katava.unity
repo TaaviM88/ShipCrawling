@@ -371,6 +371,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a5a47aaaafb06243b1689adfad244e9, type: 3}
+--- !u!1 &801283684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 801283685}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &801283685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801283684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.00999999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963308578
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,38 +858,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 346213606, guid: ccc759812a8568f4abde76878dbc71f9, type: 3}
-      propertyPath: movementSettings.ForwardSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 346213606, guid: ccc759812a8568f4abde76878dbc71f9, type: 3}
-      propertyPath: movementSettings.BackwardSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 346213606, guid: ccc759812a8568f4abde76878dbc71f9, type: 3}
-      propertyPath: movementSettings.JumpForce
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 346213606, guid: ccc759812a8568f4abde76878dbc71f9, type: 3}
-      propertyPath: mouseLook.smooth
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 346213606, guid: ccc759812a8568f4abde76878dbc71f9, type: 3}
-      propertyPath: movementSettings.StrafeSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1719797845, guid: ccc759812a8568f4abde76878dbc71f9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1719797845, guid: ccc759812a8568f4abde76878dbc71f9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 1719797845, guid: ccc759812a8568f4abde76878dbc71f9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.14
-      objectReference: {fileID: 0}
     - target: {fileID: 346213604, guid: ccc759812a8568f4abde76878dbc71f9, type: 3}
       propertyPath: logText
       value: 
@@ -1128,6 +1126,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050013258263479394, guid: 87edb464fa36f064ebb01536f18fd5c9,
+        type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050013258263479394, guid: 87edb464fa36f064ebb01536f18fd5c9,
+        type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87edb464fa36f064ebb01536f18fd5c9, type: 3}
