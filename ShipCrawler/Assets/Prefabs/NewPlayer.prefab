@@ -261,7 +261,7 @@ MonoBehaviour:
   - {fileID: 7400006, guid: 7347fcbfa0fdefc4ab5a3f1987b02250, type: 3}
   - {fileID: 7400008, guid: 7347fcbfa0fdefc4ab5a3f1987b02250, type: 3}
   overrideController: {fileID: 0}
-  useNavMeshAgent: 1
+  useNavMeshAgent: 0
 --- !u!114 &346213602
 MonoBehaviour:
   m_ObjectHideFlags: 0
