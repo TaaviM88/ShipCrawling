@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -276,11 +276,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1628201629, guid: 31925489cec0f4a449fd9c26c15106c5, type: 3}
+    - target: {fileID: 1628201626, guid: 31925489cec0f4a449fd9c26c15106c5, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1628201626, guid: 31925489cec0f4a449fd9c26c15106c5, type: 3}
+    - target: {fileID: 1628201629, guid: 31925489cec0f4a449fd9c26c15106c5, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -1037,7 +1037,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 1}
-  m_Intensity: 17.35
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1226,16 +1226,16 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.26
       objectReference: {fileID: 0}
+    - target: {fileID: 346213603, guid: ccc759812a8568f4abde76878dbc71f9, type: 3}
+      propertyPath: useNavMeshAgent
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 346213602, guid: ccc759812a8568f4abde76878dbc71f9, type: 3}
       propertyPath: damage.baseValue
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1338028308, guid: ccc759812a8568f4abde76878dbc71f9, type: 3}
       propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 346213603, guid: ccc759812a8568f4abde76878dbc71f9, type: 3}
-      propertyPath: useNavMeshAgent
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
