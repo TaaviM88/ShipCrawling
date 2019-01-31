@@ -36,6 +36,7 @@ ModelImporter:
     2100012: Pillars
     2100014: Pier_Wood
     2100016: Rock
+    2100018: Stonework
     2300000: Beach
     2300002: Cave
     2300004: Chain_Mechanism
@@ -115,6 +116,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Stone
     second: {fileID: 2100000, guid: 52dbd8cce76fb98468ae61b97141d9eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stonework
+    second: {fileID: 2100000, guid: b745116a6ae4c19439c93669d063a1f6, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
