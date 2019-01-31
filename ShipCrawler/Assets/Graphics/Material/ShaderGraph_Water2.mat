@@ -48,33 +48,41 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_24839A60: 0
-    - Vector1_2E71E642: 0
-    - Vector1_325CD423: 0
+    - Vector1_20200885: 0.85
+    - Vector1_24839A60: 0.39
+    - Vector1_2E71E642: 1.74
+    - Vector1_325CD423: 0.12
     - Vector1_3E3DCD2A: 0
-    - Vector1_4BA003A8: 2.76
+    - Vector1_4BA003A8: 0
+    - Vector1_4D516C09: 1.11
+    - Vector1_5DE283B1: 1.2
     - Vector1_63542092: 0
     - Vector1_6B3C7891: 0
     - Vector1_6BF558AD: 0
-    - Vector1_6CA32AD9: 0.7
-    - Vector1_6E948774: 0
+    - Vector1_6CA32AD9: 0
+    - Vector1_6DD2EE45: 0.45
+    - Vector1_6E948774: 0.57
     - Vector1_70E79776: 0
-    - Vector1_77F225EE: 0
+    - Vector1_77F225EE: 0.65
+    - Vector1_812CA73D: 0.99
     - Vector1_8CA128D6: 0
-    - Vector1_96299876: 0
+    - Vector1_96299876: 0.27
     - Vector1_97010F91: 0
-    - Vector1_A30F0D18: 0
+    - Vector1_9AC846BA: 0.78
+    - Vector1_A30F0D18: 1.78
     - Vector1_A4A734FD: 0
-    - Vector1_B6F1F2C1: 0
-    - Vector1_BA346CB4: 0
-    - Vector1_BCDE68C0: 0
+    - Vector1_B6F1F2C1: 0.22
+    - Vector1_BA346CB4: 1.42
+    - Vector1_BCDE68C0: 0.69
     - Vector1_CA5E2FA4: 0
+    - Vector1_D8F5E3E1: 0.99
     - Vector1_DBC8BD44: 0
-    - Vector1_E49CBD76: 0
+    - Vector1_E49CBD76: 0.51
     - Vector1_EF230514: 0
-    - Vector1_F0C8D2FD: 0
-    - Vector1_FCB8C978: 0
-    - Vector1_FE87627C: 0
+    - Vector1_F0C8D2FD: 0.72
+    - Vector1_F1C77CDB: 0.54
+    - Vector1_FCB8C978: 1.25
+    - Vector1_FE87627C: 0.84
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -98,8 +106,8 @@ Material:
     - Color_9042A0AF: {r: 0.20879316, g: 0.63743633, b: 0.6415094, a: 0}
     - Color_A9534E59: {r: 0.24390353, g: 0.52606684, b: 0.5943396, a: 0}
     - Color_AA7498C1: {r: 0.23139909, g: 0.5289666, b: 0.754717, a: 0}
-    - Vector2_99A4BFA1: {r: 0, g: 0, b: 0, a: 0}
-    - Vector2_E069D8AE: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_99A4BFA1: {r: 0.51, g: 0.2, b: 0.4, a: 0.31}
+    - Vector2_E069D8AE: {r: 0.31, g: 0.26, b: 0.67, a: 0.73}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
