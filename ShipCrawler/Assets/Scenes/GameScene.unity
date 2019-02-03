@@ -33,8 +33,8 @@ RenderSettings:
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
-  m_ReflectionBounces: 1
+  m_DefaultReflectionResolution: 64
+  m_ReflectionBounces: 4
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
@@ -64,18 +64,18 @@ LightmapSettings:
     m_CompAOExponentDirect: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
-    m_LightmapsBakeMode: 1
+    m_LightmapsBakeMode: 0
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
-    m_MixedBakeMode: 2
-    m_BakeBackend: 2
+    m_MixedBakeMode: 1
+    m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 128
-    m_PVRBounces: 2
+    m_PVRBounces: 3
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
@@ -2287,6 +2287,75 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 744532329}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &317595468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 317595470}
+  - component: {fileID: 317595469}
+  m_Layer: 0
+  m_Name: Spot Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &317595469
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317595468}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 0
+  m_Color: {r: 0.6287825, g: 0.84680635, b: 0.8490566, a: 1}
+  m_Intensity: 8.16
+  m_Range: 26.79
+  m_SpotAngle: 64
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 2
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0.1
+  m_ShadowAngle: 0
+--- !u!4 &317595470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317595468}
+  m_LocalRotation: {x: 0.5747761, y: 0.038666617, z: -0.1437144, w: 0.80466366}
+  m_LocalPosition: {x: 1.99, y: 8.69, z: -2.45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 53
+  m_LocalEulerAnglesHint: {x: 69.409004, y: -17.027, z: -32.09}
 --- !u!1 &331651159 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: bc009e34f887deb48aa71d48c168d2b6,
@@ -3123,7 +3192,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.60938054, g: 0.71456873, b: 0.7735849, a: 1}
   m_Intensity: 10
   m_Range: 83.5
   m_SpotAngle: 119.34
@@ -3669,12 +3738,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2542597210336137578, guid: 82a503b39085138499e15ea528a42fe3,
-        type: 3}
-      propertyPath: ragdoll
-      value: 
-      objectReference: {fileID: 1113165218, guid: 93d7f8b15a03e994292498072cda1409,
-        type: 3}
     - target: {fileID: 2542597210336137582, guid: 82a503b39085138499e15ea528a42fe3,
         type: 3}
       propertyPath: randomPoints.Array.size
@@ -3725,6 +3788,12 @@ PrefabInstance:
       propertyPath: damage.baseValue
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2542597210336137578, guid: 82a503b39085138499e15ea528a42fe3,
+        type: 3}
+      propertyPath: ragdoll
+      value: 
+      objectReference: {fileID: 1113165218, guid: 93d7f8b15a03e994292498072cda1409,
+        type: 3}
     - target: {fileID: 2542597210336137581, guid: 82a503b39085138499e15ea528a42fe3,
         type: 3}
       propertyPath: maxHealth.baseValue
@@ -5077,7 +5146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &615730045
 Light:
   m_ObjectHideFlags: 0
@@ -5089,7 +5158,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.7169812, g: 0.6503983, b: 0.503916, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.55
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -5123,13 +5192,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615730044}
-  m_LocalRotation: {x: 0.4520047, y: -0.13174479, z: 0.31263652, w: 0.824981}
+  m_LocalRotation: {x: 0.49563125, y: -0.1483346, z: 0.30511498, w: 0.799532}
   m_LocalPosition: {x: -18.43805, y: 23.885687, z: -49.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 47
-  m_LocalEulerAnglesHint: {x: 55.911003, y: 6.6860003, z: 45.061}
+  m_LocalEulerAnglesHint: {x: 62.014004, y: 7.9930005, z: 46.585003}
 --- !u!1 &631771239 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100006, guid: fda4375d8a131d04da72b7e57a3371fa,
@@ -15760,12 +15829,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2542597210336137578, guid: 82a503b39085138499e15ea528a42fe3,
-        type: 3}
-      propertyPath: ragdoll
-      value: 
-      objectReference: {fileID: 1113165218, guid: 93d7f8b15a03e994292498072cda1409,
-        type: 3}
     - target: {fileID: 2542597210336137582, guid: 82a503b39085138499e15ea528a42fe3,
         type: 3}
       propertyPath: randomPoints.Array.data[0]
@@ -15811,6 +15874,12 @@ PrefabInstance:
       propertyPath: damage.baseValue
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2542597210336137578, guid: 82a503b39085138499e15ea528a42fe3,
+        type: 3}
+      propertyPath: ragdoll
+      value: 
+      objectReference: {fileID: 1113165218, guid: 93d7f8b15a03e994292498072cda1409,
+        type: 3}
     - target: {fileID: 2542597210336137581, guid: 82a503b39085138499e15ea528a42fe3,
         type: 3}
       propertyPath: maxHealth.baseValue
