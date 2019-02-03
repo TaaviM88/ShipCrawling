@@ -8,6 +8,7 @@ public class EnemyRandomPatrol : MonoBehaviour
     public int currentRandomPoint;
     public Transform Player;
     public Transform[] randomPoints;
+    public float waypointDistance = 2.5f;
     private float playerDist, randomPointDist;
     private bool chasing, chaseTime, attacking;
     private float chaseStopwatch, attackingStopwatch;
@@ -74,7 +75,7 @@ public class EnemyRandomPatrol : MonoBehaviour
             combat.Attack(targetPlayer);
         }
 
-        if (randomPointDist <= 2) {
+        if (randomPointDist <= waypointDistance) {
             currentRandomPoint = Random.Range(0, randomPoints.Length);
             walk();
 

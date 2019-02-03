@@ -6,15 +6,19 @@ using UnityEngine;
 public class DoorScript : Interactable
 {
     Animator anime;
-    public bool isLocked = false;
+    Animator animeDoor;
+    public bool isLocked = false, doorStaysOpen = false, useSeparateDoor = false;
     bool doorIsOpen = false;
     public float closingTime = 2f;
     float countdown;
     public string doorDescription = "Hellou, this is a door. Good bye...FUCK FACE";
     public string hintIfDoorLocked = "Hey mate! Guess what?!?! This door is locked. Try find a key you idiot.";
-    public GameObject door;
     public Equipment requiedItemObject;
+    [Header("Add seperate door object with animation if you need one.")]
+    public GameObject door;
+ 
     Collider col;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +28,10 @@ public class DoorScript : Interactable
         if(door == null)
         {
             return;
+        }
+        else if(door != null && useSeparateDoor)
+        {
+            animeDoor = door.GetComponent<Animator>();
         }
     }
 
@@ -55,7 +63,7 @@ public class DoorScript : Interactable
     // Update is called once per frame
     void Update()
     {
-        if(doorIsOpen)
+        if(doorIsOpen && doorStaysOpen == false)
         {
             countdown -= Time.deltaTime;
             if(countdown <= 0)
@@ -75,11 +83,20 @@ public class DoorScript : Interactable
             if (open)
             {
                 anime.SetTrigger("Open");
+                if(useSeparateDoor)
+                {
+                    animeDoor.SetTrigger("Open");
+                }
             }
-            else
+            else if(!open && doorStaysOpen == false)
             {
                 anime.SetTrigger("Close");
+                if (useSeparateDoor)
+                {
+                    animeDoor.SetTrigger("Close");
+                }
             }
+
             if (open)
             {
                 // Laitetaan ovien colliderit triggeriksi että päästään läpi
@@ -87,6 +104,12 @@ public class DoorScript : Interactable
                 if (door != null)
                 {
                     col.isTrigger = true;
+                    if(useSeparateDoor)
+                    {
+                        Collider doorCol = door.GetComponent<Collider>();
+                        doorCol.isTrigger = true;
+                    }   
+                    
                 }
                 else
                     Debug.Log($"Nyt meni jotain vikaa {gameObject.name}");
@@ -98,11 +121,17 @@ public class DoorScript : Interactable
                 if(door != null)
                 {
                     col.isTrigger = false;
+                    if (useSeparateDoor)
+                    {
+                        Collider doorCol = door.GetComponent<Collider>();
+                        doorCol.isTrigger = false;
+                    }
                 }
             }
         }
         else
         {
+            
             InformJournalDoorIsLocked();
         }
                 
@@ -118,8 +147,9 @@ public class DoorScript : Interactable
         InteractiveDoor(false);
     }
 
-    private void InformJournalDoorIsLocked()
+    public void InformJournalDoorIsLocked()
     {
         Journal.Instance.Log(hintIfDoorLocked);
+        
     }
 }

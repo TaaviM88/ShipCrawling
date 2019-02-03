@@ -171,7 +171,7 @@ MonoBehaviour:
   logText: {fileID: 0}
   textboxObj: {fileID: 0}
   textCooldown: 0.5
-  textCountdown: 0
+  textCountdown: 1
 --- !u!114 &346213603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,7 +422,7 @@ Light:
   m_Type: 0
   m_Color: {r: 0.735849, g: 0.7130397, b: 0.496351, a: 1}
   m_Intensity: 4
-  m_Range: 3
+  m_Range: 3.8510056
   m_SpotAngle: 93.839874
   m_CookieSize: 10
   m_Shadows:
@@ -506,7 +506,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.2
+  near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 0

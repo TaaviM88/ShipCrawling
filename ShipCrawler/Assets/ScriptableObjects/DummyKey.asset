@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a068c4e6f949aa4f926ba4b1d0faf15, type: 3}
+  m_Name: DummyKey
+  m_EditorClassIdentifier: 
+  name: Key
+  icon: {fileID: 21300000, guid: 200c5c156ec3dcc46800e17c8b1f2115, type: 3}
+  isDefaultItem: 0
+  obj: {fileID: 2388751625321185060, guid: a2254c335e2596a43ab3f147064bbfff, type: 3}
+  equipSlot: 1
+  armorModifier: 0
+  damageModifier: 0
